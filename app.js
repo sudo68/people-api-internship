@@ -2,12 +2,14 @@ const express = require("express");
 const { headers } = require("./middleware");
 const { personRouter } = require("./routes/personRoutes");
 
-const port = 3000 || 8000;
-console.log(process.env.PORT);
+// Imported PORT variable from the .env file.
+const port = process.env.PORT || 8000;
 const app = express();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+// Using our headers middleware from ./middleware.js
 app.use(headers);
+// Using our product router from ./routes/personRoutes.js
 app.use("/api/person", personRouter);
 
 app.get("/", (req, res) => {

@@ -4,6 +4,7 @@
 	"description": "A simple Node.js API hosting people resources",
 	"main": "app.js",
 	"scripts": {
+		"_comment": " --env-file=.env: This argument loads the .env file so that we can use environment variables ",
 		"start": "nodemon --env-file=.env app.js"
 	},
 	"author": "Sudarshan Lawati",

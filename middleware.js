@@ -1,7 +1,8 @@
-const headers = (req, res, next) => {
+// Headers function is a middleware that appends response headers to every respone returned by our API.
+function headers(req, res, next) {
 	res.append("Access-Control-Allow-Origin", ["*"]);
 	res.append("Access-Control-Allow-Methods", ["GET,POST,PUT,DELETE"]);
 	res.append("Access-Control-Allow-Headers", ["Content-Type"]);
 	next();
-};
+}
 module.exports = { headers };
