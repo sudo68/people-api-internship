@@ -24,3 +24,7 @@ PORT=3000
 
 Replace the DB_USER, DB_DATABASE & DB_PASSWORD with your own credentials.
 ```
+
+-   After finishing the environment setup
+    -   Run `npm install` command and
+    -   Run `npm start` command
